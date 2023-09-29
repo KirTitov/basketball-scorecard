@@ -8,7 +8,7 @@ htm {
 }
 
 body {
-    margin: 0;
+    margin: 0px;
     font-family: "CursedTimerUlil-Aznm", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
@@ -48,7 +48,8 @@ button:hover {
     justify-content: space-around;
     margin: 0px auto 0px auto;
     border-radius: 6px;
-    margin: 10% 10%;
+    margin: 10% auto 0px auto;
+    
 }
 
 .content-wrapper {
@@ -61,7 +62,7 @@ button:hover {
     background-color: #6A7A9E;
     opacity: 0.9;
     background-image: linear-gradient(0deg, #6A7A9E 50%, #54617e 50%);
-    background-size: 5px 5px;
+    background-size: 6px 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,10 +84,16 @@ button:hover {
     justify-content: space-between;
 }
 
-@media only screen and (max-width: 400px) {
+.reset {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 500px) {
   .container {
       flex-direction: column;
       align-items: center;
+      max-width: 100%;
+      margin: 1%;
   }
   
   .content-wrapper {
