@@ -36,3 +36,14 @@ function plusThreeGuest() {
     guestScore.innerText = guestCaunt;
 }
 
+//Reset
+function reset1() {
+    homeCaunt = 0;
+    homeScore.innerText = homeCaunt;
+}
+
+function reset2() {
+    guestCaunt = 0;
+    guestScore.innerText = homeCaunt;
+}
+
