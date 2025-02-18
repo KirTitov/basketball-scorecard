@@ -1,4 +1,4 @@
-htm {
+html {
     box-sizing: border-box;  
 }
 
@@ -16,11 +16,13 @@ body {
 h1, h2, h3, h4 {
     color: #ffffff;
     font-family: "Verdana", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px;
 }
 
 h3 {
     font-size: 40px;
     line-height: 120%;
+    margin-bottom: 24px;
 }
 
 button {
@@ -29,7 +31,7 @@ button {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 12px 18px;
     border: none;
     transition: all 0.3s;
 }
@@ -37,23 +39,26 @@ button {
 button:hover {
     background: rgba(255, 255, 255, 0.5);
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
 
 .container {
-    max-width: 600px;
+    max-width: 640px;
     background: rgb(75,108,183);
     background: linear-gradient(228deg, rgba(75,108,183,1) 20%, rgba(24,40,72,1) 100%);
     display: flex;
     justify-content: space-around;
-    margin: 0px auto 0px auto;
     border-radius: 6px;
     margin: 10% auto 0px auto;
+    padding: 72px;
     
 }
 
 .content-wrapper {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 50px;
 }
 
@@ -82,10 +87,16 @@ button:hover {
 .btn-group {
     display: flex;
     justify-content: space-between;
+    gap: 4px;
 }
 
 .reset {
     margin-top: 20px;
+}
+
+.timer {
+    color: #D3346E;
+    padding-top: 16px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -98,6 +109,38 @@ button:hover {
   
   .content-wrapper {
     margin-bottom: 10px;
+    }
+}
+
+/* Animation */
+
+.flip-horizontal-bottom {
+    -webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation-direction:reverse;
+            -webkit-animation-direction:reverse;
+}
+
+/* Animation */
+@-webkit-keyframes flip-horizontal-bottom {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
+    }
+}
+
+@keyframes flip-horizontal-bottom {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
     }
 }
 

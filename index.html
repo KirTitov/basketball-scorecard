@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,7 +12,7 @@
         <div class="container">
             <div class="content-wrapper">
                 <h3>HOME</h3>
-                <div class="score-wrapper">
+                <div id="box1" class="score-wrapper">
                     <p class="score" id="home-score">0</p>
                 </div>
                 <div class="btn-group">
@@ -19,13 +20,12 @@
                     <button onclick="plusTwoHome()">+2</button>
                     <button onclick="plusThreeHome()">+3</button>
                 </div>
-
-                <button class="reset" onclick="reset1()">Reset</button>
-
+                <button id="flipBtn1" class="reset" onclick="reset1()">Reset</button>
             </div>
+            <div class="content-wrapper"><span class="timer" id="time">12:00</span></div>
             <div class="content-wrapper">
                 <h3>GUEST</h3>
-                <div class="score-wrapper">
+                <div id="box2" class="score-wrapper">
                     <p class="score" id="guest-score">0</p>
                 </div>
                 <div class="btn-group">
@@ -33,7 +33,7 @@
                     <button onclick="plusTwoGuest()">+2</button>
                     <button  onclick="plusThreeGuest()">+3</button>
                 </div>
-                <button class="reset" onclick="reset2()">Reset</button>
+                <button id="flipBtn2" class="reset" onclick="reset2()">Resett</button>
             </div>
         </div>
         <script src="index.js"></script>

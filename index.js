@@ -47,3 +47,52 @@ function reset2() {
     guestScore.innerText = homeCaunt;
 }
 
+// Timer
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 12,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+
+
+// Animation
+
+function applyFlipEffect(boxId) {
+    let box = document.getElementById(boxId);
+
+    // Remove the class to reset animation
+    box.classList.remove("flip-horizontal-bottom");
+
+    // Force reflow to restart animation
+    void box.offsetWidth;
+
+    // Re-add the class to trigger animation
+    box.classList.add("flip-horizontal-bottom");
+}
+
+// Event listeners for both buttons
+document.getElementById("flipBtn1").addEventListener("click", function() {
+    applyFlipEffect("box1");
+});
+
+document.getElementById("flipBtn2").addEventListener("click", function() {
+    applyFlipEffect("box2");
+});
